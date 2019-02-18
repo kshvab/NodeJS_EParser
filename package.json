@@ -1,0 +1,35 @@
+{
+  "name": "nodejs_eparser",
+  "version": "1.0.1",
+  "description": "Parsing hierarchy of categories and catalog of goods from the online store",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^5.11.1",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-node": "^8.0.0",
+    "nodemon": "^1.18.10"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kshvab/NodeJS_EParser.git"
+  },
+  "author": "Nick Shvab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kshvab/NodeJS_EParser/issues"
+  },
+  "homepage": "https://github.com/kshvab/NodeJS_EParser#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.88.0",
+    "slugify": "^1.3.4"
+  }
+}
