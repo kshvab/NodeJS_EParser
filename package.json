@@ -1,6 +1,6 @@
 {
   "name": "nodejs_eparser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Parsing hierarchy of categories and catalog of goods from the online store",
   "main": "app.js",
   "scripts": {

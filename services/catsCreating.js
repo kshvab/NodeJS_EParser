@@ -193,7 +193,7 @@ function runCategoriesParsing() {
 
     let shopCategoriesArrStr = JSON.stringify(catArr);
 
-    fs.writeFile('./shopCategoriesArrFile.txt', shopCategoriesArrStr, function(
+    fs.writeFile('./shopCategoriesArrFile.json', shopCategoriesArrStr, function(
       err
     ) {
       if (err) console.log('ERROR Saving!');
