@@ -36,11 +36,11 @@ function runCategoriesParsing() {
       let catName = $('.menu > li > a')
         .eq(i)
         .text();
-      let catId = i;
+      let catId = 'firstlvl' + i;
       let catSort = i;
       let catPicture = 0;
-      let catFatherName = 0;
-      let catFatherId = 0;
+      let catFatherName = 'absent';
+      let catFatherId = 'absent';
       let catHasChildren = false;
       let catAlias = slugify(catName);
       firstLvlCatsArr.push({
@@ -88,9 +88,12 @@ function runCategoriesParsing() {
           let catSort = k;
           let catPicture = 0;
 
-          let catFatherName = firstLvlCatsArr[i].catName;
+          //let catFatherName = firstLvlCatsArr[i].catName;
+          //let catFatherId = firstLvlCatsArr[i].catId;
 
-          let catFatherId = firstLvlCatsArr[i].catId;
+          let catFatherName = 0;
+          let catFatherId = 0;
+
           let catHasChildren;
           if (
             $2('ul > li a')
@@ -193,7 +196,7 @@ function runCategoriesParsing() {
 
     let shopCategoriesArrStr = JSON.stringify(catArr);
 
-    fs.writeFile('./shopCategoriesArrFile.json', shopCategoriesArrStr, function(
+    fs.writeFile('./shopCategoriesArrFile.txt', shopCategoriesArrStr, function(
       err
     ) {
       if (err) console.log('ERROR Saving!');

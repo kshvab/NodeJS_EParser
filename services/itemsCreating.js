@@ -4,7 +4,7 @@ const cheerio = require('cheerio');
 var slugify = require('slugify');
 
 function runItemsParsing() {
-  var catArrJson = fs.readFileSync('./shopCategoriesArrFile.json', {
+  var catArrJson = fs.readFileSync('./shopCategoriesArrFile.txt', {
     encoding: 'UTF-8'
   });
 
@@ -42,7 +42,7 @@ function saveItemsArr(itemsArr) {
 
   let shopItemsArrStr = JSON.stringify(itemsArr);
 
-  fs.writeFile('./shopItemsArrFile.json', shopItemsArrStr, function(err) {
+  fs.writeFile('./shopItemsArrFile.txt', shopItemsArrStr, function(err) {
     if (err) console.log('ERROR Saving!');
     console.log('Saved Items!');
   });
